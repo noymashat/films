@@ -6,11 +6,11 @@
 2. Open command line in the folder containing the project
 
 ```sh
-$ yarn install
+$ npm i
 ```
 
 and then,
 
 ```sh
-$ yarn start
+$ npm start
 ```
