@@ -1,4 +1,7 @@
 @media only screen and (max-width: 600px) {
+	.films-container {
+		width: 300px;
+	}
 	.film-container {
 		display: flex;
 		flex-direction: row;
@@ -8,6 +11,9 @@
 }
 
 @media only screen and (min-width: 600px) {
+	.films-container {
+		width: 500px;
+	}
 	.film-container {
 		width: 100%;
 		display: flex;

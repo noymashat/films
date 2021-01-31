@@ -1,6 +1,5 @@
 import React from "react";
 import Film from "./Film";
-import "../styles/Films.css";
 
 export default function Films(props) {
 	return (

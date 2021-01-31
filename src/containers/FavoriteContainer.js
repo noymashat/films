@@ -18,8 +18,6 @@ export default class Favorite extends Component {
 	};
 
 	render() {
-		// let favorite = this.state.favorite;
-		// let handleFavorite = this.handleFavorite;
 		return (
 			<FavoriteIcon
 				isFavorite={this.props.isFavorite}

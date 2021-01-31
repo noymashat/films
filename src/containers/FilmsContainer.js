@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import Films from "../components/Films";
+import { Spinner } from "react-bootstrap";
+import SortFilterContainer from "./SortFilterContainer";
 import { sortByKey } from "../functions/sort";
 import { filterFavorites } from "../functions/filter";
 import axios from "axios";
-import SortFilterContainer from "./SortFilterContainer";
+import "../styles/Films.css";
 
 export default class FilmsContainer extends Component {
 	constructor(props) {
@@ -60,6 +62,14 @@ export default class FilmsContainer extends Component {
 			}
 		});
 		this.setFilms(filmList);
+		const allFilmsList = this.state.allFilms.map((film) => {
+			if (film.episode_id === id) {
+				return { ...film, isFavorite: "true" };
+			} else {
+				return { ...film };
+			}
+		});
+		this.setAllFilms(allFilmsList);
 	};
 
 	//handle remove from favorites in 'isFavorite' and local storage by film id (episode_id)
@@ -73,6 +83,14 @@ export default class FilmsContainer extends Component {
 			}
 		});
 		this.setFilms(filmList);
+		const allFilmsList = this.state.allFilms.map((film) => {
+			if (film.episode_id === id) {
+				return { ...film, isFavorite: "false" };
+			} else {
+				return { ...film };
+			}
+		});
+		this.setAllFilms(allFilmsList);
 	};
 
 	// api request for films
@@ -106,7 +124,7 @@ export default class FilmsContainer extends Component {
 		let films = this.state.films;
 
 		return isLoaded ? (
-			<div>
+			<div className="films-container">
 				<SortFilterContainer
 					setFilter={this.setFilter}
 					setSort={this.setSort}
@@ -123,7 +141,7 @@ export default class FilmsContainer extends Component {
 			</div>
 		) : (
 			<div>
-				<p>Loading...</p>
+				<Spinner animation="border" variant="light" />
 			</div>
 		);
 	}

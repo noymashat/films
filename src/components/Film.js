@@ -14,11 +14,9 @@ export default function Films(props) {
 	const {
 		id,
 		title,
-		episode_id,
 		director,
 		producer,
 		release_date,
-		characters,
 		imagePath,
 		isFavorite,
 		addToFavorites,
@@ -46,7 +44,7 @@ export default function Films(props) {
 
 	// manipulate release date string
 	const handleDateText = () => {
-		let date = props.release_date.split("-");
+		let date = release_date.split("-");
 		return `${date[2]}-${date[1]}-${date[0]}`;
 	};
 
@@ -79,37 +77,3 @@ export default function Films(props) {
 		</div>
 	);
 }
-
-// {producer.length > 20 ? (
-// 	<span>
-// 		<strong>Producer: </strong>
-// 	</span>
-// ) : (
-// 	<span>
-// 		<strong>Producers: </strong>
-// 	</span>
-// )}
-// {producer.length > 20 ? (
-// 	handleProducersText()
-// ) : (
-// 	<span>
-// 		<br />
-// 		{producer}
-// 	</span>
-// )}
-// <br />
-// <span>
-// 	<strong>Director: </strong>
-// </span>
-// <span>
-// 	<br />
-// 	{director}
-// </span>
-// <br />
-// <span>
-// 	<strong>Release Date: </strong>
-// </span>
-// <span>
-// 	<br />
-// 	{handleDateText()}
-// </span>
