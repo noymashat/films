@@ -1,0 +1,33 @@
+@media only screen and (min-width: 600px) {
+	.jumbo {
+		background: url(../assets/StarWars.png);
+		background-size: cover;
+		background-position: center center;
+		height: auto;
+		width: 100%;
+		overflow: hidden;
+		position: absolute;
+		z-index: 2;
+	}
+
+	.p-height {
+		margin-top: 300px;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.jumbo {
+		background: url(../assets/starWarsLogo.jpg);
+		background-size: cover;
+		background-position: center center;
+		height: auto;
+		width: 100%;
+		overflow: hidden;
+		position: relative;
+		z-index: 2;
+	}
+
+	.p-height {
+		height: 150px;
+	}
+}

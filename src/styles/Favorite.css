@@ -1,0 +1,45 @@
+.icon-div {
+	position: relative;
+	top: 100px;
+	height: 75px;
+	width: 75px;
+}
+.icon-chosen {
+	border-radius: 50px;
+	color: yellow;
+	height: 50%;
+	width: 50%;
+}
+
+.icon-chosen:hover {
+	border-radius: 50px;
+	color: yellow;
+	height: 52%;
+	width: 52%;
+}
+
+.icon-neutral {
+	border-radius: 50px;
+	height: 50%;
+	width: 50%;
+}
+
+.icon-neutral:hover {
+	border-radius: 50px;
+	height: 52%;
+	width: 52%;
+}
+
+@media only screen and (max-width: 600px) {
+	.icon-div {
+		position: relative;
+		top: 75px;
+	}
+}
+
+@media only screen and (min-width: 600px) {
+	.icon-div {
+		position: relative;
+		top: 100px;
+	}
+}

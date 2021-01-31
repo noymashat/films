@@ -1,0 +1,19 @@
+@media only screen and (max-width: 600px) {
+	.film-container {
+		display: flex;
+		flex-direction: row;
+		align-self: center;
+		justify-content: center;
+	}
+}
+
+@media only screen and (min-width: 600px) {
+	.film-container {
+		width: 100%;
+		display: flex;
+		flex-grow: 0;
+		flex-direction: row;
+		align-self: center;
+		justify-content: center;
+	}
+}
