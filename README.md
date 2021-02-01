@@ -14,3 +14,9 @@ and then,
 ```sh
 $ npm start
 ```
+
+### In the website:
+- A list of the films
+- Favoorite icon for each film
+- Filter favorites or display all films
+- Sort films by Episode number/ Title/ Date
