@@ -1,4 +1,4 @@
-# Star War Films
+# Star Wars Films
 
 ### In order to run locally:
 
