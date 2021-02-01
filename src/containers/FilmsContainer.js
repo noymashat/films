@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Films from "../components/Films";
-import { Spinner } from "react-bootstrap";
+import ReactSpinner from "react-bootstrap-spinner";
 import SortFilterContainer from "./SortFilterContainer";
 import { sortByKey } from "../functions/sort";
 import { filterFavorites } from "../functions/filter";
@@ -72,6 +72,7 @@ export default class FilmsContainer extends Component {
 		this.setAllFilms(allFilmsList);
 	};
 
+	// TODO: change allFilms
 	//handle remove from favorites in 'isFavorite' and local storage by film id (episode_id)
 	removeFromFavorites = (id) => {
 		localStorage.setItem(id, "false");
@@ -122,7 +123,6 @@ export default class FilmsContainer extends Component {
 		let isLoaded = this.state.isLoaded;
 		let error = this.state.error;
 		let films = this.state.films;
-
 		return isLoaded ? (
 			<div className="films-container">
 				<SortFilterContainer
@@ -141,7 +141,7 @@ export default class FilmsContainer extends Component {
 			</div>
 		) : (
 			<div>
-				<Spinner animation="border" variant="light" />
+				<ReactSpinner type="border" color="light" size="2" />
 			</div>
 		);
 	}

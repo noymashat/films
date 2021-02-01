@@ -4,7 +4,6 @@ export const filterFavorites = (allFilms, films, filter) => {
 		favorites: "favorites",
 	};
 	const filterKey = types[filter];
-	console.table(filterKey, allFilms);
 	return filterKey === "all"
 		? allFilms
 		: films.filter((film) => film["isFavorite"] === "true");
