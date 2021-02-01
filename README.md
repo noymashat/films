@@ -17,6 +17,6 @@ $ npm start
 
 ### In the website:
 - A list of the films
-- Favorite icon for each film
+- Info and favorite icon for each film
 - Filter favorites or display all films
 - Sort films by Episode Number/ Title/ Date
